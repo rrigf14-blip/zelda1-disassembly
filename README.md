@@ -50,3 +50,14 @@ Contact
 Aldo Núñez
 
 aldonunez1@gmail.com
+
+# GitHub Actions Build
+name: Build Game Package
+on: [push, workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build Game
+        run: echo "BotW 2D Build System Ready"
